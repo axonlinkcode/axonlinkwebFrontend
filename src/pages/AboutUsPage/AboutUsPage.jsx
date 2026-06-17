@@ -9,7 +9,6 @@ import joe from '../../assets/team/joe.png';
 import ami from '../../assets/team/ami.png'
 import ozi from '../../assets/team/ozi.png'
 import sola from '../../assets/team/sola.png'
-import femi from '../../assets/team/femi.png'
 
 const team = [
   {
@@ -31,11 +30,6 @@ const team = [
     name: 'Josep Yanum',
     role: 'Product Designer',
     image: joe,
-  },
-  {
-    name: 'Olorunfemi Ojo',
-    role: 'Cyber-Security',
-    image: femi,
   },
 ];
 
