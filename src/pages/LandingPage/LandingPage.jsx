@@ -2,7 +2,7 @@ import FaqSection from '../../components/FAQ/Faq.jsx';
 import Join from '../../components/Join/Join.jsx';
 import { Link } from 'react-router-dom';
 import { useOutletContext } from 'react-router-dom';
-import { useState ,useEffect} from 'react';
+import { useState } from 'react';
 /*HERO*/
 import { FiArrowUpRight } from 'react-icons/fi';
 import styles from './LandingPage.module.css';
@@ -33,21 +33,8 @@ import mobileDataBanner from '../../assets/banner/mobileDataBanner.png';
 const LandingPage = () => {
   const { onOpenWaitlist } = useOutletContext();
   const [isVideoOpen, setIsVideoOpen] = useState(false);
-const videoUrl =
-"https://player.cloudinary.com/embed/?cloud_name=dyn5ath7a&public_id=Patient_Demo_Video._Updated_mr5dxx&autoplay=true&mute=true";
+const videoUrl ="https://res.cloudinary.com/dyn5ath7a/video/upload/f_auto,q_auto/v1771765879/axonlink_video_pqek24.mp4";;
 
-// Close modal on ESC key press
-useEffect(() => {
-  const handleEsc = (e) => {
-    if (e.key === "Escape") {
-      setIsVideoOpen(false);
-    }
-  };
-
-  window.addEventListener("keydown", handleEsc);
-
-  return () => window.removeEventListener("keydown", handleEsc);
-}, []);
   return (
     /*HERO*/
     <div>
@@ -157,6 +144,7 @@ useEffect(() => {
         </div>
       </section>
 
+      {/* JOURNEY */}
       {/* JOURNEY */}
       <section className={styles.journeySection}>
         <h3 className={styles.journeyHeading}>
@@ -337,33 +325,28 @@ useEffect(() => {
       <Join />
 
       {/* VIDEO MODAL */}
-    {isVideoOpen && (
-  <div
-    className={styles.modalOverlay}
-    onClick={() => setIsVideoOpen(false)}
-  >
-    <div
-      className={styles.modalContent}
-      onClick={(e) => e.stopPropagation()}
-    >
+      {isVideoOpen && (
+        <div
+          className={styles.modalOverlay}
+          onClick={() => setIsVideoOpen(false)}>
+          <div
+            className={styles.modalContent}
+            onClick={(e) => e.stopPropagation()}>
+            <button
+              className={styles.modalClose}
+              onClick={() => setIsVideoOpen(false)}>
+              ✕
+            </button>
 
-      <button
-        className={styles.modalClose}
-        onClick={() => setIsVideoOpen(false)}
-      >
-        ✕
-      </button>
-
-      <iframe
-        src={`${videoUrl}&autoplay=true&mute=true`}
-        className={styles.modalVideo}
-        allow="autoplay; fullscreen"
-        allowFullScreen
-      />
-
-    </div>
-  </div>
-)}
+            <video
+              src={videoUrl}
+              controls
+              autoPlay
+              className={styles.modalVideo}
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 };

@@ -73,7 +73,7 @@ const Faq = () => {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <section className={styles.faqSection}>
+    <section id='faqs' className={styles.faqSection}>
       <div className={styles.faqLeft}>
         <h2>
           Frequently Asked

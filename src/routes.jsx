@@ -8,6 +8,8 @@ import AboutUsPage from './pages/AboutUsPage/AboutUsPage.jsx'
 import ContactPage from './pages/ContactPage/ContactPage.jsx';
 import HowItWorksPage from './pages/HowItWorksPage/HowItWorksPage.jsx';
 import SecurityPage from './pages/SecurityPage/SecurityPage.jsx';
+import PrivacyPolicyPage from './pages/PrivacyPolicyPage/PrivacyPolicyPage.jsx';
+import TermsOfServicePage from './pages/TermsOfServicePage/TermsOfServicePage.jsx';
 import NotFoundPage from './pages/NotFoundPage.jsx'
 
 function AppRoutes() {
@@ -21,6 +23,8 @@ function AppRoutes() {
         <Route path="contact" element={<ContactPage />} />
         <Route path="workings" element={<HowItWorksPage />} />
         <Route path="security" element={<SecurityPage />} />
+        <Route path="privacy-policy" element={<PrivacyPolicyPage />} />
+        <Route path="terms-of-service" element={<TermsOfServicePage />} />
 
         {/* Catch-all route for 404 */}
         <Route path='*' element={<NotFoundPage />} />

@@ -16,16 +16,36 @@ const FooterBrand = () => {
       </p>
 
       <div className={styles.footerSocials}>
-        <a href='#'>
+        <a
+          href='https://web.facebook.com/profile.php?id=61591335657932'
+          target='_blank'
+          rel='noopener noreferrer'
+          aria-label='Axonlink on Facebook'
+        >
          <img src={facebook} alt="facebook" />
         </a>
-        <a href='#'>
-           <img src={x} alt="x" />
+        <a
+          href='https://x.com/Axonlink'
+          target='_blank'
+          rel='noopener noreferrer'
+          aria-label='Axonlink on X'
+        >
+           <img src={x} alt="X" />
         </a>
-        <a href='#'>
+        <a
+          href='https://www.instagram.com/axonlink_ng/'
+          target='_blank'
+          rel='noopener noreferrer'
+          aria-label='Axonlink on Instagram'
+        >
            <img src={instagram} alt="instagram" />
         </a>
-        <a href='#'>
+        <a
+          href='https://www.linkedin.com/company/axonlinkhealth/'
+          target='_blank'
+          rel='noopener noreferrer'
+          aria-label='Axonlink on LinkedIn'
+        >
            <img src={linkdin} alt="linkedin" />
         </a>
       </div>

@@ -102,13 +102,22 @@
   gap: 12px;
 }
 
-.icons div {
+.icons a {
   width: 36px;
   height: 36px;
   background: #eee;
   border-radius: 50%;
   display: grid;
   place-items: center;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.icons a:hover,
+.icons a:focus-visible {
+  background: #e3e0f4;
+  transform: translateY(-2px);
+  outline: none;
 }
 
 .socialIcon {
