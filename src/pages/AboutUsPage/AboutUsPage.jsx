@@ -145,7 +145,7 @@ const AboutUs = () => {
       </section>
 
       {/* Team */}
-      <section className={styles.team}>
+      <section id='team' className={styles.team}>
         <h3>Meet The Team</h3>
         <p className={styles.teamIntro}>
           Driven by purpose, powered by people. Meet the minds shaping our
