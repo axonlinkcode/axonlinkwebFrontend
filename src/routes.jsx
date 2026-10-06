@@ -11,10 +11,13 @@ import SecurityPage from './pages/SecurityPage/SecurityPage.jsx';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage/PrivacyPolicyPage.jsx';
 import TermsOfServicePage from './pages/TermsOfServicePage/TermsOfServicePage.jsx';
 import NotFoundPage from './pages/NotFoundPage.jsx'
+import PatientInvitePage from './pages/PatientInvitePage/PatientInvitePage.jsx';
 
 function AppRoutes() {
   return (
     <Routes>
+      <Route path="/patient-invite" element={<PatientInvitePage />} />
+
       <Route element={<Layout />}>
         <Route index element={<LandingPage />} />
         <Route path="features" element={<FeaturesPage />} />
