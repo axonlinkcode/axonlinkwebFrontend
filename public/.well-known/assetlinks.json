@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.axonlink.health",
+      "sha256_cert_fingerprints": [
+        "AF:4A:94:22:5A:56:F7:C2:2F:70:3A:67:F0:7C:27:45:38:D0:FF:62:53:4B:AA:3F:5B:C6:81:1F:DF:2E:C9:1B"
+      ]
+    }
+  }
+]
